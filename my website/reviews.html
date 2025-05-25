@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - My Website</title>
+    <style>
+        /* Dark theme styles */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #eeeeee; /* Very light gray, almost white */
+            line-height: 1.6;
+            min-height: 100vh;
+
+            /* --- Background Image for the Page (Same as Home Page) --- */
+            background-image: url('3d423420-7706-447e-862e-37eae7596d4d.jpg'); /* Your background image */
+            background-size: contain; /* Zooms out to show entire image */
+            background-position: center center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-attachment: fixed; /* Keep the background fixed when scrolling */
+            background-color: #87CEEB; /* Changed to Sky Blue to match Home page */
+
+            /* --- Overlay for text readability over the background image --- */
+            position: relative;
+            z-index: 0;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
+            z-index: -1;
+        }
+
+        header {
+            background-color: rgba(31, 31, 31, 0.8); /* Slightly lighter than body, semi-transparent */
+            color: #ffffff; /* White text for header */
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #333; /* Darker border */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            gap: 20px;
+            z-index: 1;
+        }
+
+        .header-content {
+            text-align: center;
+            flex-grow: 1;
+            max-width: 100%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #ffffff; /* White for header H1 */
+        }
+
+        header p{
+           margin: 0;
+           font-size: 1.2rem;
+           color: #cccccc; /* Light gray for header paragraph */
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background-color: rgba(26, 26, 26, 0.85);  /* Slightly lighter than body, semi-transparent */
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #333; /* Darker border */
+        }
+
+        section h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: #ffffff; /* White text for section H2 */
+        }
+
+        .review-item {
+            background-color: rgba(40, 40, 40, 0.9); /* Dark gray for review items */
+            border: 1px solid #444; /* Darker border */
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .review-item h3 {
+            margin-top: 0;
+            color: #007bff; /* Highlight review title (can remain blue) */
+            font-size: 1.5rem;
+        }
+
+        .review-item .rating {
+            color: #ffc107; /* Star color (can remain yellow) */
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-item .author {
+            font-style: italic;
+            color: #aaaaaa; /* Medium gray for author name */
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: rgba(31, 31, 31, 0.8); /* Semi-transparent footer */
+            color: #ffffff; /* White text for footer */
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-top: 1px solid #333; /* Darker border */
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav ul li a {
+            color: #ffffff; /* White links for footer nav */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav ul li a:hover {
+            color: #cccccc; /* Light gray on hover */
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Customer Reviews</h1>
+            <p>Hear what our customers are saying!</p>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Latest Reviews</h2>
+            <div class="review-item">
+                <h3>Amazing Quality and Design!</h3>
+                <div class="rating">★★★★★</div>
+                <p>"I recently received my hoodie, and I'm absolutely blown away by the quality. The fabric is super soft, and the design is even better in person. It truly stands out! Can't wait for new drops."</p>
+                <p class="author">- Jane Doe</p>
+            </div>
+            <div class="review-item">
+                <h3>Stylish and Comfortable</h3>
+                <div class="rating">★★★★☆</div>
+                <p>"This brand really knows how to blend street style with comfort. My '5 The Way' hoodie is my new favorite go-to. It's warm, fits perfectly, and I've received so many compliments."</p>
+                <p class="author">- John Smith</p>
+            </div>
+            <div class="review-item">
+                <h3>Unique and Expressive</h3>
+                <div class="rating">★★★★★</div>
+                <p>"Finally a brand that offers unique designs that truly represent street spirit. The attention to detail is fantastic, and I love how expressive each piece feels. Highly recommend!"</p>
+                <p class="author">- Alex G.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 all Rights Reserved</p>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
